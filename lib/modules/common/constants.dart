@@ -115,6 +115,33 @@ class Constants {
       ),
     );
   }
+  static Padding headingWithICon({
+    required String title,
+    required  IconData icon,
+    double? titleSize,
+    Color? titleColor,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: AppTextStyles.normal600(
+              fontSize: titleSize ?? 16.0,
+              color: titleColor ?? AppColors.backgroundDark,
+            ),
+          ),
+          TextButton(
+            onPressed: () {},
+            style: TextButton.styleFrom(),
+            child:  Image.asset(''),
+          ),
+        ],
+      ),
+    );
+  }
 
   static Padding heading600({
     required String title,
